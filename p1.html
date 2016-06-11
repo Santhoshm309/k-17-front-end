@@ -1,0 +1,159 @@
+
+<html lang="en">
+<title>K!17 Restaurant</title>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="header">
+	<img width="60px" height="60px" src="k.jpg">
+	<div id="right">
+	<h2>The <span style="color: orange">K!17</span> Restaurant</h2>
+	<span style="font-size:10px text-align:center float:right"> Goodness in your mouth!!</span>
+</div>
+</div>
+	<div id="main">
+	<p id="para">Please enter the quantity required for each item in the menu </p>
+	<table width="100%" class="watch" id="menu">
+		<tr>
+		<th class="toprow" scope="col" >Sl.No</th>
+		<th class="toprow" scope="col">Item Name</th>
+		<th class="toprow" scope="col">Rate</th>
+		<th class="toprow" scope="col">Quantity</th>
+		<th class="toprow" scope="col">Amount</th>
+		</tr>
+		
+		<tr class="disp">
+		<td>1</td>
+		<td>Tomatoe Soup</td>
+		<td>INR 35</td>
+		<td><input type=text id="soup" onBlur="quantity('soup','amount1',35);total('amount1','amount2','amount3','amount4','amount5','amount6');" value="0" onClick="value=''" size="1" maxlength="2">
+		</td>
+		<td id="amount1">
+			
+		</td>
+		</tr>
+		
+		
+		<tr class="disp">
+		<td>2</td>
+		<td>Veg.Pulao</td>
+		<td>INR 95</td>
+		<td><input id="pulao" onBlur="quantity('pulao','amount2',95);total('amount1','amount2','amount3','amount4','amount5','amount6');" type=text value="0" onClick="value=''" size="1" maxlength="2">
+		</td>
+		<td id="amount2">
+			
+		</td>
+		</tr>
+		
+		<tr class="disp">
+		<td>3</td>
+		<td>Veg.Noodles</td>
+		<td>INR 125</td>
+		<td><input type=text id="noodles" onBlur="quantity('noodles','amount3',125);total('amount1','amount2','amount3','amount4','amount5','amount6');"value="0" onClick="value=''" size="1" maxlength="2">
+		</td>
+		<td id="amount3">
+			
+		</td>
+		</tr>
+		
+		<tr class="disp">
+		<td>4</td>
+		<td id="fried" ><b>Veg.Fried Rice</b></td>
+		<td>INR 100</td>
+		<td><input id="friedrice" onBlur="quantity('friedrice','amount4',100);total('amount1','amount2','amount3','amount4','amount5','amount6');" value="0" onClick="value=''"  type=text size="1" maxlength="5">
+		<td id="amount4">
+		
+		</td></tr>
+		
+		
+		<tr class="disp">
+		<td>5</td>
+		<td>Parotta(2 peices)</td>
+		<td>INR 40</td>
+		<td><input type=text id="parotta" onBlur="quantity('parotta','amount5',40);total('amount1','amount2','amount3','amount4','amount5','amount6');" value="0" onClick="value=''" size="1" maxlength="2">
+		</td>
+		<td id="amount5">
+			
+		</td>
+		</tr>
+		
+		<tr class="disp">
+		<td>6</td>
+		<td>Ghee roast</td>
+		<td>INR 40</td>
+		<td><input type=text id="gheeroast" onBlur="quantity('gheeroast','amount6',40);total('amount1','amount2','amount3','amount4','amount5','amount6');" value="0" onClick="value=''" size="1" maxlength="2">
+		</td>
+		<td id="amount6">
+			
+		</td>
+		</tr>
+		
+		
+		
+		<tr id="bottom">
+		<td colspan="4"><p align="right" >Total Amount is</p></td>
+		<td id="total">  0  </td>
+		</table>
+		<br>
+		<center><input id="order" type="submit" value="order" onClick="dispAlert();" width="3em"></center>
+		<br><br><br><br>
+		</div>
+		
+		<div id="sidebar" height="100%">
+		<center>
+		<ul id="removebullet">
+		<li><a href="p2.html"> HOME PAGE</a></li><br><br><br>
+		<li>Veg </li><br><br><br>
+		<li>Non-Veg</li><br><br><br>
+		<li>Chineese</li><br><br><br>
+		<li>Desserts</li><br><br><br>
+		<li>Contact Us</li><br><br>
+		</ul></center>
+		</div>
+		</body>
+<script type="text/javascript">
+var tot;
+    function quantity(inputId, outputId, rate){
+	var x = document.getElementById(inputId).value;
+	var y = x*rate;
+	document.getElementById(outputId).innerHTML=y;
+	
+}
+function total(id1,id2,id3,id4,id5,id6){
+var a=document.getElementById(id1).innerHTML;
+var b=document.getElementById(id2).innerHTML;
+var c=document.getElementById(id3).innerHTML;
+var d=document.getElementById(id4).innerHTML;
+var e=document.getElementById(id5).innerHTML;
+var f=document.getElementById(id6).innerHTML;
+
+var total=Number(a)+Number(b)+Number(c)+Number(d)+Number(e)+Number(f);
+tot=total;
+document.getElementById("total").innerHTML=total;
+}
+	
+function dispAlert(){
+
+if(tot===0||tot===undefined)
+alert("Order atleast one quantity");
+else
+{
+confirm("Your final bill is \n"+document.getElementById("soup").value+" Toamto Soup\n"
+		+document.getElementById("pulao").value+" Veg Pulao\n"
+		+document.getElementById("noodles").value+" Veg Noodles\n"
+		+document.getElementById("friedrice").value+" Veg Fried Rice\n"
+		+document.getElementById("parotta").value+" Parotta\n"+
+		document.getElementById("gheeroast").value+" Ghee Roast\n"+
+		"Total amount is \t"+document.getElementById("total").innerHTML+
+		"\n\n  Click ok to continue to payment and cancel to make changes to your order"
+		);
+}
+}
+
+
+
+
+  </script>
+</html>

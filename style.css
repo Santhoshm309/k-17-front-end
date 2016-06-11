@@ -1,0 +1,110 @@
+body {
+background-image: url("home.jpg")
+}.
+
+div#header img {
+	display: inline;
+	float: left;
+	margin: 5em;
+	padding: 2em;
+}
+div#right  {
+	float:right;
+	width: 80%
+}
+div#header  {
+width: 30%;
+position: absolute;
+text-align: left;
+top: 0;
+margin-left: 2em;
+margin-top: 1em;
+color: white;
+font-family: "Arial Rounded MT Bold", Verdana, Geneva, sans-serif;
+font-weight: 900;
+color: white;
+font-size: 1em;
+padding: .5em .8em 1em 0.8em;
+background-color: black;
+line-height: 0.8em;
+
+}
+div#header h2 {
+	font-size: 1.4em;
+}
+
+h2#header2 {
+	margin-left: 2em;
+	font-family: Gulim, "Monotype Corsiva", Verdana, sans-serif;
+}
+p#para {
+	font-family: Gulim, Consolas, Verdana, sans-serif;
+	margin-left: 4.5em;
+	line-height: 1.8em;
+	font-weight: 700;
+	margin-right: 1em;
+}
+
+div#sidebar {
+	width: 15%;
+	font-weight: 600;
+	font-size: 17px;
+	font-family: Gulim, Consolas, Verdana, sans-serif;
+	position: absolute;
+	
+	float: left;
+	margin-top: 10.75em;
+	margin-left: 5em;
+	color: white;
+	
+}
+
+div#sidebar a {
+	text-decoration: none;
+}
+div#main {
+	
+	background-image: url("grey.jpg");
+	margin:	9.75em 3em 0 0;
+	float: right;
+	width: 70%
+	
+}
+
+div#webpage {
+	background: url("home3.jpg");
+}
+table {
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	border-collapse: collapse;
+	border: 2px dashed black;
+}
+th {
+	font-weight: 900;
+	height: 3em;
+	border-collapse: collapse;
+	border: 2px solid black;
+	color: orange;
+	
+}
+td {
+	border-collapse: collapse;
+	border: 2px dashed black;
+	padding: 0.9em;
+	font-weight: 600;
+}
+tr {
+	border-collapse: collapse;
+	border: 2px dashed black;
+}
+input[type="submit"] {
+	border: 1px solid black;
+	font-size: 20px;
+	font-weight: 600;	
+	font-family: "Arial Black";
+}
+div#sidebar ul {
+	list-style-type: none;
+}
